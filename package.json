@@ -1,0 +1,23 @@
+{
+  "name": "archivesys",
+  "version": "1.0.0",
+  "description": "archieve system open source project",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minakshiabap/archivesys.git"
+  },
+  "keywords": [
+    "open",
+    "source"
+  ],
+  "author": "anubhav oberoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minakshiabap/archivesys/issues"
+  },
+  "homepage": "https://github.com/minakshiabap/archivesys#readme"
+}
