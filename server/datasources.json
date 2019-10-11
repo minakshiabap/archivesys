@@ -1,0 +1,18 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory",
+    "file": "storage/data.json"
+  },
+  "db_productive": {
+    "name": "db_productive",
+    "connector": "memory",
+    "file": "storage/data_dbprod.json"
+  },
+  "mongoatlas": {
+    "url": "mongodb://archive1:Mongo1010@165.227.196.129:27017/admin",
+    "database": "admin",
+    "name": "mongoatlas",
+    "connector": "mongodb"
+  }
+}
