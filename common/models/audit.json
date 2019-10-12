@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "plural": "templates",
+  "name": "audit",
+  "plural": "audits",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,19 +8,30 @@
   },
   "properties": {
 
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
+    "AppID": {
       "type": "string",
-      "default": "null"
+      "required": true
     },
-    "ChangedOn": {
-      "type": "date"
-    },
-    "ChangedBy": {
+    "AuditID": {
       "type": "string",
-      "default": "null"
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "allowedActions": {
+      "type": "string",
+    },
+    "archived": {
+      "type": "Boolean",
+    },
+    "archivedOn": {
+      "type": "Date",
+    },
+    "__v": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

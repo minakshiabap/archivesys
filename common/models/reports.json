@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "plural": "templates",
+  "name": "report",
+  "plural": "reports",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,21 +8,32 @@
   },
   "properties": {
 
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
+    "Appid": {
       "type": "string",
-      "default": "null"
+      "required":"true"
     },
-    "ChangedOn": {
-      "type": "date"
+    "tcode": {
+      "type": "string"
     },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
-    }
+    "alias": {
+      "type": "string"
+    },
+    "config": {
+      "type": "string"
+    },
+    "selection": {
+      "type": "string"
   },
+  "description": {
+    "type": "string"
+  },
+  "group": {
+    "type": "string"
+  }
+
+
+
+   },
   "validations": [],
   "relations":{
   },

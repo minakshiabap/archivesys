@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "plural": "templates",
+  "name": "systemlog",
+  "plural": "systemlogs",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,19 +8,39 @@
   },
   "properties": {
 
-    "CreatedOn": {
-      "type": "date"
+    "AuditID": {
+      "type": "date",
+    "required": true
     },
-    "CreatedBy": {
+    "eventType": {
       "type": "string",
-      "default": "null"
+      "required": true
     },
-    "ChangedOn": {
-      "type": "date"
+    "level": {
+      "type": "date",
+      "required": true
     },
-    "ChangedBy": {
+    "source": {
       "type": "string",
-      "default": "null"
+    },
+      "alias": {
+        "type": "string",
+    },
+      "message": {
+        "type": "string",
+    },
+    "otherInfo": {
+      "type": "string",
+    },
+    "dateCreated": {
+      "type": "Date",
+    },
+    "action": {
+      "type": "String",
+    },
+    "__v": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

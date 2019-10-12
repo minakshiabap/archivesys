@@ -7,55 +7,31 @@
     "validateUpsert": true
   },
   "properties": {
-    "TechnicalId": {
+    "userId": {
       "type": "string",
       "required": true
     },
-    "EmailId": {
-      "type": "string",
-      "required": true
-    },
-    "UserName": {
-      "type": "string",
-      "required": true
-    },
-    "Role": {
-      "type": "string",
-      "required": true
-    },
-    "JoiningDate": {
-      "type": "date"
-    },
-    "BDay": {
-      "type": "date"
-    },
-    "Salary":{
-      "type": "number"
-    },
-    "LeaveQuota":{
-      "type": "number",
-      "default": 8
-    },
-    "Holiday":{
-      "type": "string",
-      "default": "Monday"
-    },
-    "MobileNo":{
+    "userName": {
       "type": "string"
     },
-    "CreatedOn": {
-      "type": "date"
+    "password": {
+      "type": "string"
     },
-    "CreatedBy": {
-      "type": "string",
-      "default": "null"
+    "archived": {
+      "type": "boolean"
     },
-    "ChangedOn": {
-      "type": "date"
+    "firstName": {
+      "type": "string"
     },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
+    "lastName": {
+      "type": "string"
+    },
+    "image ":{
+      "type": "string"
+    },
+    "__v":{
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

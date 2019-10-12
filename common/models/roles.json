@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "plural": "templates",
+  "name": "role",
+  "plural": "roles",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,19 +8,17 @@
   },
   "properties": {
 
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
+    "role": {
       "type": "string",
-      "default": "null"
+      "required":"true"
     },
-    "ChangedOn": {
-      "type": "date"
-    },
-    "ChangedBy": {
+    "tcodes": {
       "type": "string",
-      "default": "null"
+      "required": "true"
+    },
+    "__v": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],
