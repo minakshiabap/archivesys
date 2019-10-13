@@ -51,5 +51,37 @@
   "AppUser": {
     "dataSource": "mongoatlas",
     "public": true
+  },
+  "role": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "userTcode": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "roleTcode": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "userRole": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "report": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "app": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "audit": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "systemlog": {
+    "dataSource": "mongoatlas",
+    "public": true
   }
 }

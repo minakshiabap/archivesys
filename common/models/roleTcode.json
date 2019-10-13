@@ -1,13 +1,13 @@
 {
-  "name": "userTcode",
-  "plural": "userTcodes",
+  "name": "roleTcode",
+  "plural": "roleTcodes",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "UserId": {
+    "RoleId": {
       "type": "string"
     },
     "tcode": {
@@ -20,10 +20,10 @@
   },
   "validations": [],
   "relations":{
-    "FromUser":{
+    "FromRole":{
       "type":"belongsTo",
-      "model":"AppUser",
-      "foreignKey":"UserId"
+      "model":"role",
+      "foreignKey":"RoleId"
     }
   },
   "acls": [

@@ -21,22 +21,22 @@
       "required": true
     },
     "source": {
-      "type": "string",
+      "type": "string"
     },
       "alias": {
-        "type": "string",
+        "type": "string"
     },
       "message": {
-        "type": "string",
+        "type": "string"
     },
     "otherInfo": {
-      "type": "string",
+      "type": "string"
     },
     "dateCreated": {
-      "type": "Date",
+      "type": "date"
     },
     "action": {
-      "type": "String",
+      "type": "String"
     },
     "__v": {
       "type": "number",

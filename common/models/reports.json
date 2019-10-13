@@ -36,6 +36,11 @@
    },
   "validations": [],
   "relations":{
+    "ToApps":{
+      "type":"belongsTo",
+      "model":"app",
+      "foreignKey":"Appid"
+    }
   },
   "acls": [
     {

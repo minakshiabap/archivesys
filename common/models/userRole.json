@@ -1,36 +1,35 @@
 {
-  "name": "app",
-  "plural": "apps",
+  "name": "userRole",
+  "plural": "userRoles",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-
-    "AppID": {
-      "type": "string",
-    "required":"true"
-    },
-    "archived": {
-      "type": "string",
-    },
-    "appName": {
+    "UserId": {
       "type": "string"
     },
-    "dbName": {
+    "RoleId": {
       "type": "string"
     },
-    "archivedOn": {
-      "type": "string" 
-    },
-    "__v": {
+    "__v":{
       "type": "number",
       "default": 0
     }
   },
   "validations": [],
   "relations":{
+    "FromUser":{
+      "type":"belongsTo",
+      "model":"AppUser",
+      "foreignKey":"UserId"
+    },
+    "FromRole":{
+      "type":"belongsTo",
+      "model":"role",
+      "foreignKey":"RoleId"
+    }
   },
   "acls": [
     {

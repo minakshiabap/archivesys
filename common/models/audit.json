@@ -21,13 +21,13 @@
       "required": true
     },
     "allowedActions": {
-      "type": "string",
+      "type": "string"
     },
     "archived": {
-      "type": "Boolean",
+      "type": "Boolean"
     },
     "archivedOn": {
-      "type": "Date",
+      "type": "Date"
     },
     "__v": {
       "type": "number",
@@ -36,6 +36,11 @@
   },
   "validations": [],
   "relations":{
+    "FromAudit":{
+      "type":"belongsTo",
+      "model":"systemlog",
+      "foreignKey":"AuditID"
+    }
   },
   "acls": [
     {

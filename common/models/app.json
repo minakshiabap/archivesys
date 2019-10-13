@@ -1,6 +1,6 @@
 {
-  "name": "template",
-  "plural": "templates",
+  "name": "app",
+  "plural": "apps",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -8,19 +8,25 @@
   },
   "properties": {
 
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
+    "AppID": {
       "type": "string",
-      "default": "null"
+      "required":"true"
     },
-    "ChangedOn": {
-      "type": "date"
+    "archived": {
+      "type": "string"
     },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
+    "appName": {
+      "type": "string"
+    },
+    "dbName": {
+      "type": "string"
+    },
+    "archivedOn": {
+      "type": "string"
+    },
+    "__v": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],

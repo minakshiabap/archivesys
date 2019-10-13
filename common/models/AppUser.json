@@ -36,15 +36,15 @@
   },
   "validations": [],
   "relations":{
-    "leaveRequests":{
+    "userRoles":{
       "type":"hasMany",
-      "model":"LeaveRequest",
-      "foreignKey":"AppUserId"
+      "model":"userRole",
+      "foreignKey":"UserId"
     },
-    "ToTasks":{
+    "userTcodes":{
       "type":"hasMany",
-      "model":"task",
-      "foreignKey":"CreatedBy"
+      "model":"userTcode",
+      "foreignKey":"UserId"
     }
   },
   "acls": [
