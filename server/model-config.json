@@ -83,5 +83,29 @@
   "systemlog": {
     "dataSource": "mongoatlas",
     "public": true
+  },
+  "mard": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "makt": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "retensionAppSIDDb": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "retensionCollLvl": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "retensionRowLvl": {
+    "dataSource": "mongoatlas",
+    "public": true
+  },
+  "backgroundJob": {
+    "dataSource": "mongoatlas",
+    "public": true
   }
 }

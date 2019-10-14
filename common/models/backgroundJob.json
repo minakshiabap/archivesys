@@ -1,38 +1,78 @@
 {
-  "name": "template",
-  "plural": "templates",
-  "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
-
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
-      "type": "string",
-      "default": "null"
-    },
-    "ChangedOn": {
-      "type": "date"
-    },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
-    }
-  },
-  "validations": [],
-  "relations":{
-  },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
-  "methods": {}
+	"name": "backgroundJob",
+	"plural": "backgroundJobs",
+	"base": "PersistedModel",
+	"idInjection": true,
+	"options": {
+		"validateUpsert": true
+	},
+	"properties": {
+		"Job_ID": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Job_Name": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Created_By": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Created_Date": {
+			"type": "date",
+			"required": false
+		},
+		"Created_Time": {
+			"type": "number",
+			"default": 0,
+			"required": false
+		},
+		"Job_Type": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Job_frequency": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Completed_Date": {
+			"type": "date",
+			"required": false
+		},
+		"Completed_Time": {
+			"type": "number",
+			"default": 0,
+			"required": false
+		},
+		"Periority": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Status_Of_Job": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Spool_List": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [{
+		"accessType": "*",
+		"principalType": "ROLE",
+		"principalId": "$unauthenticated",
+		"permission": "DENY"
+	}],
+	"methods": {}
 }

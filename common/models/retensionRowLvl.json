@@ -1,13 +1,19 @@
 {
-	"name": "retensionCollLvl",
-	"plural": "retensionCollLvls",
+	"name": "retensionRowLvl",
+	"plural": "retensionRowLvls",
 	"base": "PersistedModel",
 	"idInjection": true,
 	"options": {
 		"validateUpsert": true
 	},
 	"properties": {
+
 		"DataBase_Name": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Collection_Name": {
 			"type": "string",
 			"default": "null",
 			"required": false
@@ -92,6 +98,7 @@
 			"default": "null",
 			"required": false
 		}
+
 
 	},
 	"validations": [],

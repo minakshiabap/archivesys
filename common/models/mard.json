@@ -1,38 +1,95 @@
 {
-  "name": "template",
-  "plural": "templates",
-  "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
-
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
-      "type": "string",
-      "default": "null"
-    },
-    "ChangedOn": {
-      "type": "date"
-    },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
-    }
-  },
-  "validations": [],
-  "relations":{
-  },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
-  "methods": {}
+	"name": "mard",
+	"plural": "mards",
+	"base": "PersistedModel",
+	"idInjection": true,
+	"options": {
+		"validateUpsert": true
+	},
+	"properties": {
+		"MATNR": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"LABST": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"LFGJA": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"LFMON": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"LGORT": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"LVORM": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"SPEME": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"SPERR": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"PSTAT": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"EINME": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"INSME": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"RETME": {
+			"type": "number",
+			"default": "null",
+			"required": false
+		},
+		"UMLME": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"VMLAB": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"WERKS": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [{
+		"accessType": "*",
+		"principalType": "ROLE",
+		"principalId": "$unauthenticated",
+		"permission": "DENY"
+	}],
+	"methods": {}
 }

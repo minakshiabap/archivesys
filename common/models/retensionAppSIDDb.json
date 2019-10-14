@@ -1,38 +1,101 @@
 {
-  "name": "template",
-  "plural": "templates",
-  "base": "PersistedModel",
-  "idInjection": true,
-  "options": {
-    "validateUpsert": true
-  },
-  "properties": {
+	"name": "retensionAppSIDDb",
+	"plural": "retensionAppSIDDbs",
+	"base": "PersistedModel",
+	"idInjection": true,
+	"options": {
+		"validateUpsert": true
+	},
+	"properties": {
+		"DataBase_Name": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Delete_Flag": {
+			"type": "boolean",
+			"default": false,
+			"required": false
+		},
+		"Deletion_Flag_Date": {
+			"type": "date",
+			"required": false
+		},
+		"Deletion_Flag_User": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Data_Purged_Date": {
+			"type": "date",
+			"required": false
+		},
+		"Data_purged": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Purged_By_User": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Retention_Hold": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Retention_Hold_By": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Retention_Hold_Changed_By": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"Retention_Hold_Changed_Date": {
+			"type": "date",
+			"required": false
+		},
+		"Retention_Hold_Date": {
+			"type": "date",
+			"default": "null",
+			"required": false
+		},
+		"eDiscovery_Changed_Date": {
+			"type": "date",
+			"required": false
+		},
+		"eDiscovery_Date": {
+			"type": "date",
+			"required": false
+		},
+		"eDiscovery_Hold": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"eDiscovery_Hold_By": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		},
+		"eDiscovery_Last_Changed_By": {
+			"type": "string",
+			"default": "null",
+			"required": false
+		}
 
-    "CreatedOn": {
-      "type": "date"
-    },
-    "CreatedBy": {
-      "type": "string",
-      "default": "null"
-    },
-    "ChangedOn": {
-      "type": "date"
-    },
-    "ChangedBy": {
-      "type": "string",
-      "default": "null"
-    }
-  },
-  "validations": [],
-  "relations":{
-  },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
-  "methods": {}
+	},
+	"validations": [],
+	"relations": {},
+	"acls": [{
+		"accessType": "*",
+		"principalType": "ROLE",
+		"principalId": "$unauthenticated",
+		"permission": "DENY"
+	}],
+	"methods": {}
 }
