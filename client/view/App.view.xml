@@ -4,7 +4,7 @@
 
 	   <App>
 			 <pages>
-				 <Page>
+				 <Page title="Retension Management System">
 					 <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
 						<l:content>
 						<TileContent footer="Current Quarter" unit="EUR" class="sapUiSmallMargin">
