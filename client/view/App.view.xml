@@ -1,0 +1,90 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:c="sap.ui.commons" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="oft.fiori.controller.App"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:l="sap.ui.layout" xmlns:semantic="sap.m.semantic" xmlns:pageLayout="sap.uxap" displayBlock="true">
+
+	   <App>
+			 <pages>
+				 <Page>
+					 <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
+						<l:content>
+						<TileContent footer="Current Quarter" unit="EUR" class="sapUiSmallMargin">
+							<content>
+								<NumericContent scale="M" value="1.96"
+									valueColor="Error" indicator="Up" />
+							</content>
+						</TileContent>
+						<TileContent footer="Leave Requests" class="sapUiSmallMargin">
+							<content>
+								<NumericContent value="3"
+									icon="sap-icon://travel-expense" />
+							</content>
+						</TileContent>
+						<TileContent footer="Hours since last Activity" class="sapUiSmallMargin">
+							<content>
+								<NumericContent value="9" icon="sap-icon://locked" />
+							</content>
+						</TileContent>
+						<TileContent footer="New Notifications" class="sapUiSmallMargin">
+							<content>
+								<FeedContent contentText="@@notify Great outcome of the Presentation today. The new functionality and the new design was well received."
+									subheader="about 1 minute ago in Computer Market" value="132" />
+							</content>
+						</TileContent>
+						</l:content>
+					</l:Grid>
+					<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Sales Fulfillment Application Title"
+							subheader="Subtitle" press="press">
+							<TileContent unit="EUR" footer="Current Quarter">
+								<ImageContent src="sap-icon://home-share" />
+							</TileContent>
+						</GenericTile>
+
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							header="Manage Background Jobs"
+							subheader="Subtitle" press="press">
+							<TileContent>
+								<ImageContent src="sap-icon://action" />
+							</TileContent>
+						</GenericTile>
+
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							header="Manage Activity Master Data"
+							subheader="Launch Tile" mode="HeaderMode" press="press">
+							<TileContent unit="10.00 EUR" footer="Current Quarter" />
+						</GenericTile>
+
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							 header="Senior Consultant"
+							subheader="Department" press="press">
+							<TileContent>
+								<ImageContent src="sap-icon://customer" />
+							</TileContent>
+						</GenericTile>
+					 <l:VerticalLayout>
+					 <SlideTile class="sapUiTinyMarginBegin sapUiTinyMarginTop">
+						<GenericTile
+							backgroundImage="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwsC8ccWfjVXztjHf6iu2sObKaJEI4EDNqks2En_9sFzfUxUHX"
+							frameType="TwoByOne" press="pressOnTileOne">
+							<TileContent footer="August 21, 2020">
+								<NewsContent
+									contentText="SAP Unveils Powerful New Player Comparision Tool Exclusively on NFL.com"
+									subheader="Today, SAP News" />
+							</TileContent>
+						</GenericTile>
+						<GenericTile
+							backgroundImage="https://www.qantas.com/content/travelinsider/en/explore/asia/singapore/singapore/things-to-do-in-singapore-at-night/_jcr_content/parsysTop/hero.img.full.medium.jpg/1532400241696.jpg"
+							frameType="TwoByOne" press="pressOnTileTwo">
+							<TileContent footer="August 21, 2020">
+								<NewsContent
+									contentText="Wind Map: Monitoring Real-Time and Forecasted Wind Conditions across the Globe"
+									subheader="Today, SAP News" />
+							</TileContent>
+						</GenericTile>
+					 </SlideTile>
+
+					</l:VerticalLayout>
+				 </Page>
+			 </pages>
+		 </App>
+
+</mvc:View>
