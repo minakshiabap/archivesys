@@ -1,11 +1,44 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:c="sap.ui.commons" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="oft.fiori.controller.App"
+<mvc:View xmlns:core="sap.ui.core" xmlns:c="sap.ui.commons"
+	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="oft.fiori.controller.App"
 	xmlns:html="http://www.w3.org/1999/xhtml"
-	xmlns:l="sap.ui.layout" xmlns:semantic="sap.m.semantic" xmlns:pageLayout="sap.uxap" displayBlock="true">
+	xmlns:l="sap.ui.layout" xmlns:semantic="sap.m.semantic"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:pageLayout="sap.uxap" displayBlock="true">
 
 	   <App>
 			 <pages>
 				 <Page title="Retension Management System">
-					 <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
+
+					 <f:SimpleForm>
+						 <f:content>
+							 <Label text="User Id" />
+							 <Input id="idUserId" submit="onSearch" />
+							 <Label text="User Name" />
+							 <Input id="idUserName" />
+							 <Label text="First Name" />
+							 <Input id="idFirstName" />
+							 <Label text="Last Name" />
+							 <Input id="idLastName" />
+						 </f:content>
+					 </f:SimpleForm>
+					 <Table id="idRoles" updateFinished="onFinish">
+						 <columns>
+							 <Column>
+								 <header>
+									 <Label text="Role" />
+								 </header>
+							 </Column>
+							 <Column>
+								 <header>
+									 <Label text="Version" />
+								 </header>
+							 </Column>
+						</columns>
+					 </Table>
+					 <Button text="LoadData" press="onLoadData"/>
+
+
+					 <!-- <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
 						<l:content>
 						<TileContent footer="Current Quarter" unit="EUR" class="sapUiSmallMargin">
 							<content>
@@ -82,7 +115,12 @@
 						</GenericTile>
 					 </SlideTile>
 
-					</l:VerticalLayout>
+					</l:VerticalLayout> -->
+					<footer>
+						<Toolbar>
+							<Button text="Save" press="onSave" />
+						</Toolbar>
+				  </footer>
 				 </Page>
 			 </pages>
 		 </App>

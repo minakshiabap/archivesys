@@ -1,6 +1,7 @@
 sap.ui.define([
-	"oft/fiori/controller/BaseController"
-], function(Controller) {
+	"oft/fiori/controller/BaseController",
+	"sap/m/MessageToast"
+], function(Controller, MessageToast) {
 	"use strict";
 
 	return Controller.extend("oft.fiori.controller.App", {
@@ -37,15 +38,97 @@ sap.ui.define([
 					 t = setTimeout(yourFunction, 900000);  // time is in milliseconds
 			 }
 		 },
+		 onFinish: function(onFinish){
+			 for (var i = 0; i < onFinish.getSource().getItems().length; i++) {
+				 var name = this.allRoles[onFinish.getSource().getItems()[i].getCells()[0].getText()].name;
+  			 onFinish.getSource().getItems()[i].getCells()[0].setText(name);
+			 }
+		 },
+		 allRoles: [],
+		 onSearch: function(oEvent){
+			 //step 1: read what use enetered in field
+			 var userName = oEvent.getParameter("value");
+			 //step 2: read the technical user id - pk
+			 var oDataModel = this.getView().getModel();
+			 var that = this;
+			 oDataModel.read("/roles",{
+				 success: function(dataSet){
+					 for (var i = 0; i < dataSet.results.length; i++) {
+					 	that.allRoles[dataSet.results[i].id] = {
+							name: dataSet.results[i].role
+						};
+					 }
+				 }
+			 });
+			 oDataModel.read("/AppUsers",{
+				 filters: [new sap.ui.model.Filter("userId", sap.ui.model.FilterOperator.EQ , userName)],
+				 success: function(resultsx){
+					 //alert("yeah found this user");
+					 var userId = "'" + resultsx.results[0].id + "'";
+					 var that2 = that;
+					 oDataModel.read("/userRoles",{
+						 filters: [new sap.ui.model.Filter("UserId", sap.ui.model.FilterOperator.EQ , userId)],
+						 success: function(results){
+							 var oTable = that2.getView().byId("idRoles");
+							 var oModel = new sap.ui.model.json.JSONModel();
+							 oModel.setData({data: results.results});
+							 oTable.setModel(oModel);
+							 oTable.bindItems({
+								 path: "/data",
+								 template: new sap.m.ColumnListItem({
+									 cells: [new sap.m.Text({text: "{RoleId}"}),
+								 					new sap.m.Text({text: "{__v}"})]
+								 })
+							 });
+						 }
+					 });
+
+				 }
+			 });
+
+			 //step 3: get the corresponding user's Role
+			 //step 4: fill my table
+
+		 },
 		 onLogout: function(){
 			 this.logOutApp();
 		 },
 			onInit: function() {
 				this.getOwnerComponent().getModel("local").setSizeLimit(600);
 				this.idleLogout();
-				
-			}
 
+			},
+			onLoadData: function(){
+				//step1 : obtain the object of our odata Models
+				var oDataModel = this.getView().getModel();
+				//step 2: use the model object to make an odata get call to read one ES - AppUsers
+				oDataModel.read("/AppUsers", {
+					success: function(data){
+						debugger;
+					},
+					error: function(error){
+
+					}
+				});
+			},
+			onSave: function(){
+				var payload = {
+													"userId": this.getView().byId("idUserId").getValue(),
+											    "userName": this.getView().byId("idUserName").getValue(),
+											    "firstName":this.getView().byId("idFirstName").getValue(),
+											    "lastName":this.getView().byId("idLastName").getValue()
+											};
+				var oDataModel = this.getView().getModel();
+				oDataModel.create("/AppUsers", payload, {
+					success: function(response){
+						MessageToast.show("Save was successful");
+					},
+					error: function(){
+						debugger;
+					}
+				})
+
+			}
 		/**
 		 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
 		 * (NOT before the first rendering! onInit() is used for that one!).
