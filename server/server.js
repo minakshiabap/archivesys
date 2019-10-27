@@ -33,6 +33,29 @@ app.start =
 			console.log('Browse your REST API at %s%s', baseUrl, explorerPath);
 		}
 
+		app.get("/getSpecial", function(req, res){
+
+			var userTable = app.models.AppUser;
+			var roleTable = app.models.userRole;
+			userTable.find({where: {userId : 'anubhav'}}, function(err, result){
+				debugger;
+				var userId = result[0].id.toString();
+				var userName = "'" +  result[0].firstName.toString() + "'";
+				roleTable.find({where: {UserId : userId}}, function(err, userRole){
+					var arr = [];
+					for (var i = 0; i < userRole.length; i++) {
+						arr.push({ "user": userName , "role" : userRole[i].RoleId });
+					}
+					res.send(arr);
+				});
+
+			});
+
+
+		});
+
+
+
 	});
 };
 
