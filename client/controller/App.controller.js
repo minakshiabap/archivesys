@@ -60,6 +60,9 @@ sap.ui.define([
 					 }
 				 }
 			 });
+			 $.get("/getSpecial", function(res){
+				 console.log(res);
+			 });
 			 oDataModel.read("/AppUsers",{
 				 filters: [new sap.ui.model.Filter("userId", sap.ui.model.FilterOperator.EQ , userName)],
 				 success: function(resultsx){

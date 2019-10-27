@@ -9,7 +9,7 @@
 			 <pages>
 				 <Page title="Retension Management System">
 
-					 <f:SimpleForm>
+					 <!-- <f:SimpleForm>
 						 <f:content>
 							 <Label text="User Id" />
 							 <Input id="idUserId" submit="onSearch" />
@@ -36,9 +36,42 @@
 						</columns>
 					 </Table>
 					 <Button text="LoadData" press="onLoadData"/>
+					 <Select items="{/roles}">
+						 <items>
+							 <core:Item text="{tcodes}" key="{tcodes}" />
+						 </items>
+					</Select>
+					 <Table id="idAppUsers" items="{/AppUsers}">
+						 <columns>
+							 <Column>
+								 <header>
+									 <Label text="User Id" />
+								 </header>
+							 </Column>
+							 <Column>
+								 <header>
+									 <Label text="First Name" />
+								 </header>
+							 </Column>
+							 <Column>
+								 <header>
+									 <Label text="Last Name" />
+								 </header>
+							 </Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<Text text="{userId}" />
+									<Text text="{firstName}" />
+									<Text text="{lastName}" />
+								</cells>
+							</ColumnListItem>
+					  </items>
+					 </Table> -->
 
 
-					 <!-- <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
+					 <l:Grid containerQuery="true" class="sapUiSmallMarginTop">
 						<l:content>
 						<TileContent footer="Current Quarter" unit="EUR" class="sapUiSmallMargin">
 							<content>
@@ -115,7 +148,7 @@
 						</GenericTile>
 					 </SlideTile>
 
-					</l:VerticalLayout> -->
+					</l:VerticalLayout>
 					<footer>
 						<Toolbar>
 							<Button text="Save" press="onSave" />
