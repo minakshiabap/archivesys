@@ -18,7 +18,7 @@
     "event-stream": "latest",
     "exceljs": "latest",
     "express": "^4.16.4",
-    "express-fileupload": "^1.0.0",
+    "express-fileupload": "^1.1.9",
     "express-session": "^1.15.6",
     "googleapi": "^1.0.2",
     "googleapis": "^43.0.0",
