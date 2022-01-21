@@ -22,7 +22,7 @@
     "express-session": "^1.15.6",
     "googleapi": "^1.0.2",
     "googleapis": "^43.0.0",
-    "log4js": "^0.6.38",
+    "log4js": "^6.4.0",
     "loopback": "^2.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.3.1",
