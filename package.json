@@ -17,7 +17,7 @@
     "cors": "^2.5.2",
     "event-stream": "latest",
     "exceljs": "latest",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-fileupload": "^1.0.0",
     "express-session": "^1.15.6",
     "googleapi": "^1.0.2",
